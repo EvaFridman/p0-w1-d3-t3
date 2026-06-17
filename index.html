@@ -71,12 +71,13 @@
                                 type="text"
                                 id="name"
                                 name="name"
-                                pattern="[A-Za-z0-9]{2,20}"
+                                pattern="[A-Za-z]{2,20}"
                                 autocomplete="name"
                                 required
-                                aria-describedby="password-help"
+                                aria-describedby="name-help"
                             />
-                            <small id="password-help">Разрешены только латинские буквы и цифры без пробелов, длина от 2 до 20 символов</small>
+                            <small id="name-help">Разрешены только латинские буквы без пробелов, длина от 2 до 20 символов</small>
+                            <p aria-live="polite" id="name-error"></p>
                             <hr>
         
                             <label for="email">Электронная почта</label>
@@ -90,6 +91,7 @@
                                 aria-describedby="email-help"
                             />
                             <small id="email-help">Например, name@example.com</small>
+                            <p aria-live="polite" id="email-error"></p>
                             <hr>
         
                             <label for="phone">Телефон</label>
@@ -104,6 +106,7 @@
                                 aria-describedby="tel-help"
                             />
                             <small id="tel-help">Введите номер телефона в формате +7 123 456 78 90 или 7 123 456 78 90</small>
+                            <p aria-live="polite" id="tel-error"></p>
 
                         </fieldset>
 
@@ -116,7 +119,7 @@
                             <hr>
 
                             <label for="country">Откуда вы?</label>
-                            <input list="countries" id="country" name="country" placeholder="Выберите страну" required>
+                            <input list="countries" id="country" name="country" placeholder="Выберите страну">
                             <datalist id="countries">
                                 <option value="Россия">
                                 <option value="Германия">
