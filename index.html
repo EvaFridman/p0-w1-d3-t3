@@ -72,10 +72,12 @@
                                 id="name"
                                 name="name"
                                 pattern="[A-Za-z0-9]{2,20}"
-                                title="Разрешены только латинские буквы и цифры без пробелов, длина от 2 до 20 символов"
                                 autocomplete="name"
                                 required
+                                aria-describedby="password-help"
                             />
+                            <small id="password-help">Разрешены только латинские буквы и цифры без пробелов, длина от 2 до 20 символов</small>
+                            <hr>
         
                             <label for="email">Электронная почта</label>
                             <input
@@ -85,7 +87,10 @@
                                 title="Например, name@example.com"
                                 autocomplete="email"
                                 required
+                                aria-describedby="email-help"
                             />
+                            <small id="email-help">Например, name@example.com</small>
+                            <hr>
         
                             <label for="phone">Телефон</label>
                             <input
@@ -93,11 +98,12 @@
                                 id="phone"
                                 name="phone"
                                 pattern="\+?7\d{10}"
-                                title="Введите номер телефона в формате +71234567890 или 71234567890"
                                 placeholder="+79213335577"
                                 autocomplete="tel"
                                 required
+                                aria-describedby="tel-help"
                             />
+                            <small id="tel-help">Введите номер телефона в формате +7 123 456 78 90 или 7 123 456 78 90</small>
 
                         </fieldset>
 
@@ -105,7 +111,8 @@
                             <legend>Дополнительная информация</legend>
 
                             <label for="usecase">Зачем вам наш продукт?</label>
-                            <textarea id="usecase" name="usecase" rows="4" cols="50" placeholder="Напишите пару слов о планируемом применении нашего продукта"></textarea>
+                            <textarea id="usecase" name="usecase" rows="4" cols="50" aria-describedby="textarea-help"></textarea>
+                            <small id="textarea-help">Напишите пару слов о планируемом применении нашего продукта</small>
                             <hr>
 
                             <label for="country">Откуда вы?</label>
