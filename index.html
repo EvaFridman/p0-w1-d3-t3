@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Страница очень доступного сайта">
+        <meta property="og:title" content="Новый продукт!">
+        <meta property="og:type" content="article">
+        <meta property="og:image" content="https://static.independent.co.uk/2021/12/10/13/newFile.jpg?width=1200&height=630&fit=crop">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:description" content="Страница очень доступного сайта">
+        <title>Second task</title>
+        <style>
+            a:focus-visible,
+            button:focus-visible,
+            textarea:focus-visible,
+            input:focus-visible {
+                outline: 3px solid #000000;
+                outline-offset: 2px;
+            }
+
+            .skip-link {
+            position: absolute;
+            top: -1000px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            }
+
+            .skip-link:focus {
+            top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Перейти к содержимому</a>
+        <header>
+            <h1>Наш новый продукт</h1>
+            <nav aria-label="Основная навигация">
+                <ul>
+                    <li><a href="#product" aria-current="page">Продукт</a></li>
+                    <li><a href="#tarifs">Тарифы</a></li>
+                    <li><a href="#apply">Заявка на покупку</a></li>
+                    <li><a href="#partners">Наши партнёры</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <article>
+                <section aria-labelledby="product">
+                    <h2 id="product">О продукте</h2>
+                    <p>Продукт крутой, смотрите, как с ним растёт ваша прибыль:</p>
+                    <img src="https://img.magnific.com/free-photo/graph-going-up-red-arrow-bar-graph-with-arrow-business-concept_35913-3361.jpg?semt=ais_hybrid&w=740&q=80" alt="График, демонстрирующий стремительный рост прибыли">
+                </section>
+                <section aria-labelledby="tarifs">
+                    <h2 id="tarifs">Тарифы</h2>
+                    <p>У нас всего один тариф - 100р/м</p>
+                    <h3>Скидки</h3>
+                    <p>Скидок нет</p>
+                </section>
+                <section aria-labelledby="apply">
+                    <h2 id="apply">Хотите купить наш продукт? Заполните форму ниже!</h2>
+                    <form action="https://httpbin.org/get">
+                        <fieldset>
+                            <legend>Ваши контактные данные</legend>
+
+                            <label for="name">Имя</label>
+                            <input 
+                                type="text"
+                                id="name"
+                                name="name"
+                                pattern="[A-Za-z0-9]{2,20}"
+                                title="Разрешены только латинские буквы и цифры без пробелов, длина от 2 до 20 символов"
+                                autocomplete="name"
+                                required
+                            />
+        
+                            <label for="email">Электронная почта</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                title="Например, name@example.com"
+                                autocomplete="email"
+                                required
+                            />
+        
+                            <label for="phone">Телефон</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                pattern="\+?7\d{10}"
+                                title="Введите номер телефона в формате +71234567890 или 71234567890"
+                                placeholder="+79213335577"
+                                autocomplete="tel"
+                                required
+                            />
+
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Дополнительная информация</legend>
+
+                            <label for="usecase">Зачем вам наш продукт?</label>
+                            <textarea id="usecase" name="usecase" rows="4" cols="50" placeholder="Напишите пару слов о планируемом применении нашего продукта"></textarea>
+                            <hr>
+
+                            <label for="country">Откуда вы?</label>
+                            <input list="countries" id="country" name="country" placeholder="Выберите страну" required>
+                            <datalist id="countries">
+                                <option value="Россия">
+                                <option value="Германия">
+                                <option value="Италия">
+                            </datalist>
+
+                        </fieldset>
+
+                        <button type="submit">Отправить</button>
+                        <button type="reset" aria-label="Сбросить">x</button>
+                    </form>
+                </section>
+            </article>
+            <aside aria-labelledby="partners">
+                <h2 id="partners">Наши партнёры:</h2>
+                <ul>
+                    <li>Сбер</li>
+                    <li>Тбанк</li>
+                    <li>Ещё кто-то</li>
+                </ul>
+            </aside>
+        </main>
+        <footer>
+            <figure>
+                <img src="https://static.independent.co.uk/2021/12/10/13/newFile.jpg?width=1200&height=630&fit=crop" alt="">
+                <figcaption>Такое вот лого</figcaption>
+            </figure>
+            <time datetime="2026">2026 год</time>
+        </footer>
+    </body>
+</html>
